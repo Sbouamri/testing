@@ -20,7 +20,8 @@ sudo usermod -aG docker [user]
 sudo systemctl restart docker
 
 #Installare docker-compose:
-sudo curl -L "https://github.com/docker/compose/releases/download/1.24.1/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
+sudo curl -L "https://github.com/docker/compose/releases/download/1.24.1/docker-compose-$(uname -s)-$(uname -m)" \
+-o /usr/local/bin/docker-compose
 
 sudo chmod +x /usr/local/bin/docker-compose
 ```
@@ -282,6 +283,6 @@ docker service scale joomlastack_joomla=2
 
 ```
 ```
-gluster volume heal <VOLNAME> info split-brain # This command only shows the list of files that are in split-brain
+gluster volume heal <VOLNAME> info split-brain 
 
 ```
