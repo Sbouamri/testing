@@ -1,5 +1,9 @@
 # testing
 Build on Jenkins test
+```
+sudo apt -y install openssh-server
+```
+
 
 ```
 sudo nano /etc/network/interfaces
