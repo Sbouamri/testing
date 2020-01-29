@@ -47,8 +47,8 @@ iface ens33 inet static
 
 ```
 sudo reboot
-ifconfig 		#per controllare di aver settato corretto
-
+ifconfig 		
+#per controllare di aver settato corretto
 ping 192.168.75.11
 
 ```
