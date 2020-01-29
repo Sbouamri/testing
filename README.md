@@ -2,6 +2,8 @@
 Build on Jenkins test
 ```
 sudo apt -y install openssh-server
+
+sudo apt -y install git
 ```
 
 
