@@ -238,9 +238,9 @@ docker stack deploy joomlastack -c docker-compose.yml
 
 docker stack ps joomlastack
 
-docker stack ps joomlastack --no-trunc
-
 docker stack services joomlastack
+
+docker stack ps joomlastack --no-trunc
 
 docker service logs <service name>
 
