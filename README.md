@@ -168,16 +168,12 @@ sudo gluster volume set gfs nfs.disable Off
 ```
 ```
 sudo mkdir /gfs
-
 sudo su
-
 echo 'localhost:/gfs /gfs glusterfs defaults,_netdev,backupvolfile-server=localhost 0 0' >> /etc/fstab
-
 sudo mount -a
 
 
 sudo su
-
 chown -R anna:anna /gfs/
 
 
