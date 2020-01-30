@@ -97,7 +97,7 @@ sudo nano /etc/hosts
 
 sudo reboot
 
-
+#per verificare che funziona
 ping vm2g
 
 
