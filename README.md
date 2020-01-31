@@ -286,3 +286,59 @@ git clone https://github.com/Sbouamri/VCC-Project
 
 
 ```
+```
+
+docker stack ps <stack name> --no-trunc
+
+docker service logs <service name>
+
+docker stack rm <stack name>
+
+Aggiungere un manager allo swarm:
+docker swarm join-token manager
+
+Comandi per promuovere o togliere manager ad un nodo:
+docker node promote <node name>
+docker node demote <node name>
+
+Per tirare giù una macchina:
+docker node update --availability Drain <node name>
+
+Per riattivarla:
+docker node update --availability Active <node name>
+
+Scalare un servizio sullo stack:
+docker service scale <service name>=<number of service> 
+
+wget https://github.com/prometheus/prometheus/releases/download/v2.3.2/prometheus-2.3.2.linux-amd64.tar.gz
+./prometheus/promtool check config monitoring/prometheus/prometheus.yml 
+
+./prometheus/promtool  check rules monitoring/prometheus/alert.rules
+
+docker-compose up -d 
+docker-compose down
+docker-compose down --volumes 
+
+sudo rm -rf /gfs/*
+docker volume prune 
+
+docker exec -it joomla bash
+
+sudo iptables -t nat -L -n
+nsenter --net=/var/run/docker/netns/ingress_sbox iptables -t mangle -L -n
+apt install ipvsadm
+nsenter --net=/var/run/docker/netns/ingress_sbox ipvsadm
+
+mysql -u root --password="qweasd" -h [db_IP]
+
+docker remove -f <container name>  ->rimuovere container runnante
+docker service inspect --format {{.Endpoint.VirtualIPs}} <service name>
+docker inspect -f '{{range .NetworkSettings.Networks}}{{.IPAddress}}{{end}}' traefik
+
+
+scp * anna@vm1:phpmyadmin/
+scp * anna@vm1:joomla/
+scp * anna@vm1:monitoring/prometheus/
+scp docker-compose.yml anna@vm1:
+
+```
